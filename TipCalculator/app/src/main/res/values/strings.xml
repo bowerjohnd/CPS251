@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Tip Calculator</string>
+    <string name="enter_only_numbers_with_decimals_i_e_123_45">Enter only numbers with decimals (i.e. 123.45)</string>
+    <string name="calculate_tip">CALCULATE TIP</string>
+    <string name="tip_amounts_will_display_here">Tip amounts will display here</string>
+    <string name="enter_bill_total">Enter Bill Total</string>
+    <string name="inputError">You Must Enter a Bill Amount</string>
+    <string name="calcInputError">Calculation Failed</string>
+    <string name="inputSuccess">The tips are as follows:\n10%% = %1$s\n15%% = %2$s\n20%% = %3$s</string>
+
+</resources>
