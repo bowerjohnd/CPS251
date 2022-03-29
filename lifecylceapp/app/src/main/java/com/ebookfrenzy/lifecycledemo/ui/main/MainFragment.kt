@@ -43,12 +43,12 @@ class MainFragment : Fragment() {
 
         binding.setVariable(myViewModel, viewModel)
 
-        lifecycle.addObserver(DemoObserver())
+        lifecycle.addObserver(DemoObserver(viewModel))
 
         viewModel.displayString.value = ""
-        viewModel.addToDisplayString("onCreate")
-        viewModel.addToDisplayString("onStart")
-        viewModel.addToDisplayString("onResume")
+        //viewModel.addToDisplayString("onCreate")
+        //viewModel.addToDisplayString("onStart")
+        //viewModel.addToDisplayString("onResume")
     }
 
 }
