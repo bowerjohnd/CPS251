@@ -25,32 +25,29 @@ class Data{
 
     var size = allTitles.size
 
-    val randomTitles: Array<String> = randomTitleFun()
-    val randomDetails: Array<String> = randomDetailFun()
-    val randomImages: Array<Int> = randomImageFun()
+    var randomTitles: Array<String> = arrayOf()
+    var randomDetails: Array<String> = arrayOf()
+    var randomImages: Array<Int> = arrayOf()
 
-
-    fun randomTitleFun(): Array<String> {
-        var temp = arrayOf<String>()
-
-        for (x in 0..size) {
-            temp += allTitles[Random.nextInt(0, size)]
-        }
-        return temp
-    }
-    fun randomDetailFun(): Array<String> {
-        var temp = arrayOf<String>()
-        for (x in 0..size) {
-            temp += allDetails[Random.nextInt(0, size)]
-        }
-        return temp
-    }
-    fun randomImageFun(): Array<Int> {
-        var temp = arrayOf<Int>()
-        for (x in 0..size) {
-            temp += allImages[Random.nextInt(0, size)]
-        }
-        return temp
+    init {
+        this.randomTitleFun()
+        this.randomDetailFun()
+        this.randomImageFun()
     }
 
+    fun randomTitleFun() {
+        for (x in 0..size) {
+            this.randomTitles += allTitles[Random.nextInt(0, size)]
+        }
+    }
+    fun randomDetailFun() {
+        for (x in 0..size) {
+            this.randomDetails += allDetails[Random.nextInt(0, size)]
+        }
+    }
+    fun randomImageFun() {
+        for (x in 0..size) {
+            this.randomImages += allImages[Random.nextInt(0, size)]
+        }
+    }
 }

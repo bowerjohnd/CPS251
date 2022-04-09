@@ -9,9 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.recycleviewproject.R
 import com.google.android.material.snackbar.Snackbar
 
-class RecyclerAdapter(mvm: MainViewModel) : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
-
-    val data = mvm
+class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
         val v = LayoutInflater.from(viewGroup.context).inflate(R.layout.card_layout, viewGroup, false)
@@ -19,13 +17,13 @@ class RecyclerAdapter(mvm: MainViewModel) : RecyclerView.Adapter<RecyclerAdapter
     }
 
     override fun getItemCount(): Int {
-        return data.titles.size
+        return MainViewModel.titles.size
     }
 
     override fun onBindViewHolder(viewHolder: ViewHolder, i: Int) {
-        viewHolder.itemTitle.text = data.titles[i]
-        viewHolder.itemDetail.text = data.details[i]
-        viewHolder.itemImage.setImageResource(data.images[i])
+        viewHolder.itemTitle.text = MainViewModel.titles[i]
+        viewHolder.itemDetail.text = MainViewModel.details[i]
+        viewHolder.itemImage.setImageResource(MainViewModel.images[i])
     }
 
 

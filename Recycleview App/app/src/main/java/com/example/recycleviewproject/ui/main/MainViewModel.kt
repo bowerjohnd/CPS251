@@ -4,9 +4,19 @@ import androidx.lifecycle.ViewModel
 
 class MainViewModel : ViewModel() {
 
-    val data = Data()
+    companion object {
+        var titles = arrayOf<String>()
+        var details = arrayOf<String>()
+        var images = arrayOf<Int>()
 
-    val titles = data.randomTitles
-    val details = data.randomDetails
-    val images = data.randomImages
+        val data = Data()
+
+        init {
+            this.titles = data.randomTitles
+            this.details = data.randomDetails
+            this.images = data.randomImages
+        }
+    }
+
+
 }
