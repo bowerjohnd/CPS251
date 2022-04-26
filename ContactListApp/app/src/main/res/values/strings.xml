@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Contact List App</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="enter_phone">Enter Phone</string>
+    <string name="add">ADD</string>
+    <string name="find">FIND</string>
+    <string name="asc">ASC</string>
+    <string name="desc">DESC</string>
+    <string name="delete_contact">Delete Contact</string>
+</resources>
